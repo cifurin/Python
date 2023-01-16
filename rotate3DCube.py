@@ -20,14 +20,14 @@ clock = pygame.time.Clock()
 
 vertices = [n for n in range(9)]
 
-vertices[0] = np.matrix([[-1], [-1], [1]])
-vertices[1] = np.matrix([[1], [-1], [1]])
-vertices[2] = np.matrix([[1], [1], [1]])
-vertices[3] = np.matrix([[-1], [1], [1]])
-vertices[4] = np.matrix([[-1], [-1], [-1]])
-vertices[5] = np.matrix([[1], [-1], [-1]])
-vertices[6] = np.matrix([[1], [1], [-1]])
-vertices[7] = np.matrix([[-1], [1], [-1]])
+vertices[0] = np.matrix([[-1], [1], [1]])
+vertices[1] = np.matrix([[1], [1], [1]])
+vertices[2] = np.matrix([[1], [-1], [1]])
+vertices[3] = np.matrix([[-1], [-1], [1]])
+vertices[4] = np.matrix([[-1], [1], [-1]])
+vertices[5] = np.matrix([[1], [1], [-1]])
+vertices[6] = np.matrix([[1], [-1], [-1]])
+vertices[7] = np.matrix([[-1], [-1], [-1]])
 vertices[8] = np.matrix([[-0.5], [1], [1]])
 
 projection_matrix = np.matrix([
@@ -46,7 +46,7 @@ def generate_rot_x(theta):
 
 
 while True:
-    clock.tick(1)
+    clock.tick(10)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
