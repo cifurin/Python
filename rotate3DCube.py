@@ -88,8 +88,7 @@ while True:
         rotated = np.dot(rot_y, point)
 
         # This rotation is 180 degrees about the x-axis to account for the x-y axis used by Pygame, where y is downwards +ve
-        rotated = np.dot(generate_rot_x(pi), rotated)
-
+        #rotated = np.dot(generate_rot_x(pi), rotated)
         # This projects the 3D point on to the 2D surface, This is effectively just removing the z component
         projected2D = np.dot(projection_matrix, rotated)
         # print(projected2D)
@@ -106,21 +105,22 @@ while True:
     # pygame.draw.circle(window, BLACK, (x, y), 5)
 
     for x, y in render_points:
-        pygame.draw.circle(window, BLACK, (x, y), 5)
+        #pygame.draw.circle(window, BLACK, (x, y), 5)
         pygame.draw.line(window, RED, render_points[0], render_points[1])
         pygame.draw.line(window, RED, render_points[1], render_points[2])
         pygame.draw.line(window, RED, render_points[2], render_points[3])
         pygame.draw.line(window, RED, render_points[3], render_points[0])
-        pygame.draw.line(window, RED, render_points[4], render_points[5])
-        pygame.draw.line(window, RED, render_points[5], render_points[6])
-        pygame.draw.line(window, RED, render_points[6], render_points[7])
-        pygame.draw.line(window, RED, render_points[7], render_points[4])
-        pygame.draw.line(window, RED, render_points[0], render_points[4])
-        pygame.draw.line(window, RED, render_points[1], render_points[5])
-        pygame.draw.line(window, RED, render_points[2], render_points[6])
+        #pygame.draw.line(window, RED, render_points[4], render_points[5])
+        #pygame.draw.line(window, RED, render_points[5], render_points[6])
+        #pygame.draw.line(window, RED, render_points[6], render_points[7])
+        #pygame.draw.line(window, RED, render_points[7], render_points[4])
+        #pygame.draw.line(window, RED, render_points[0], render_points[4])
+        #pygame.draw.line(window, RED, render_points[1], render_points[5])
+        ##pygame.draw.line(window, RED, render_points[2], render_points[6])
         pygame.draw.line(window, RED, render_points[3], render_points[7])
         #draw a diagonal line on face so that it can be identified
-        pygame.draw.line(window, RED, render_points[0], render_points[2])
+        #pygame.draw.line(window, RED, render_points[0], render_points[2])
+        #pygame.draw.line(window, BLACK, render_points[5], render_points[7])
 
     # flip display?
     # pygame.display.flip()
