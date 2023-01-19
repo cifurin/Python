@@ -106,10 +106,7 @@ while True:
 
     for x, y in render_points:
         #pygame.draw.circle(window, BLACK, (x, y), 5)
-        pygame.draw.line(window, RED, render_points[0], render_points[1])
-        pygame.draw.line(window, RED, render_points[1], render_points[2])
-        pygame.draw.line(window, RED, render_points[2], render_points[3])
-        pygame.draw.line(window, RED, render_points[3], render_points[0])
+
         #pygame.draw.line(window, RED, render_points[4], render_points[5])
         #pygame.draw.line(window, RED, render_points[5], render_points[6])
         #pygame.draw.line(window, RED, render_points[6], render_points[7])
@@ -117,12 +114,14 @@ while True:
         #pygame.draw.line(window, RED, render_points[0], render_points[4])
         #pygame.draw.line(window, RED, render_points[1], render_points[5])
         ##pygame.draw.line(window, RED, render_points[2], render_points[6])
-        pygame.draw.line(window, RED, render_points[3], render_points[7])
+        #pygame.draw.line(window, RED, render_points[3], render_points[7])
         #draw a diagonal line on face so that it can be identified
         #pygame.draw.line(window, RED, render_points[0], render_points[2])
         #pygame.draw.line(window, BLACK, render_points[5], render_points[7])
 
-    # flip display?
-    # pygame.display.flip()
+        pygame.draw.line(window, RED, render_points[0], render_points[1])
+        pygame.draw.line(window, RED, render_points[1], render_points[2])
+        pygame.draw.line(window, RED, render_points[2], render_points[3])
+        pygame.draw.line(window, RED, render_points[3], render_points[0])
 
     pygame.display.update()
